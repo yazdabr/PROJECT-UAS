@@ -1,0 +1,632 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0a0920;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    
+}
+
+.navbar {
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.6s ease; /* Transisi halus */
+}
+
+.navbar.scrolled {
+    background-color: rgba(19, 17, 53, 0.8); /* Warna latar belakang dengan transparansi */
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar {
+
+    color: white; /* Warna teks agar kontras */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: lightblue;
+}
+
+/* Home Section */
+.home-section {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Menempatkan elemen di tengah */
+    padding: 0 20px; /* Padding untuk sedikit ruang di samping */
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Menyebar konten antara teks dan foto */
+    width: 80%; /* Mengatur lebar keseluruhan konten */
+    max-width: 1200px; /* Menjaga lebar maksimum konten */
+}
+
+
+
+.home-photo img {
+    width: 200px; /* Ukuran gambar */
+    height: 200px; /* U /* Membuat gambar menjadi bulat */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    margin-right: 30px; /* Jarak antara foto dan teks */
+    
+}
+
+.home-text {
+    text-align: left; /* Membuat teks rata kanan */
+    max-width: 500px; /* Membatasi lebar teks */
+}
+
+span {
+    font-weight: bold;
+}
+
+.home-text span {
+    color: #9db2cd;
+}
+.home-text p {
+    font-size: 24px; /* Ukuran font */
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Jenis font */
+    color: #9db2cd; /* Warna teks */
+    font-weight: normal; /* Menebalkan teks "Project" */
+    display: inline-block; /* Menjadikan teks berada dalam satu baris */
+}
+
+.home-content h1 {
+
+    font-size: 1.5rem; /* Ukuran teks besar */
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.home-content h2 {
+    font-size: 3rem; /* Ukuran teks lebih besar untuk nama */
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.home-content p {
+    font-size: 1.8rem; /* Ukuran teks untuk deskripsi */
+    margin: 20px 0;
+}
+
+.home-content button {
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color: #1f3b51;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.home-content button:hover {
+    background-color: rgb(159, 177, 183);
+}
+
+.text-container {
+    width: 100%;
+    max-width: 400px;
+     /* Batasi lebar agar teks tidak terlalu melebar */
+    text-align: center; /* Teks berada di tengah */
+    margin-bottom: 20px; /* Memberi jarak antara teks dan gambar */
+}
+
+#gold-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap; /* Agar teks tetap terbungkus */
+    overflow: hidden; /* Mencegah teks di luar elemen terlihat saat mengetik */
+    animation: blink-cursor 0.7s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+
+.text-container p {
+    padding-top: 50px;
+    padding-right: 70px;
+    font-size: 18px;
+    text-align: justify;
+    color: #63748e; /* Menetapkan warna putih untuk teks */
+    font-weight: bold; /* Menebalkan teks */
+    line-height: 1.4; /* Menambahkan jarak antar baris */
+}
+
+
+#photo-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background: radial-gradient(at left, #ffffff, #b3b3b3);
+    padding: 20px;  /* Menambahkan padding untuk memberikan jarak di sekitar kotak */
+    max-width: 800px;  /* Menambahkan batasan lebar maksimum */
+    width: 100%;  /* Membuat elemen mengisi lebar kontainer */
+    margin: 40px auto;
+    box-shadow: 0 8px 8px rgba(61, 61, 108, 0.6); 
+    transition: transform 0.3s, box-shadow 0.3s; /* Mengatur margin otomatis di kiri dan kanan untuk menengahkannya */
+}
+#photo-gallery:hover {
+    transform: scale(1.05); /* Membesarkan sedikit kotak saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Menambah bayangan */
+}
+
+.photo-container {
+    position: relative;
+    width: 400px;  /* Ukuran kotak besar */
+    height: 200px; /* Ukuran kotak besar */
+    border-radius: 10px;
+    border: 5px solid #bebebe; /* Border kotak */
+    overflow: hidden;  /* Menyembunyikan gambar yang keluar dari kotak */
+     /* Border shadow */
+}
+
+.slides {
+    display: flex;
+    width: 100%; /* Mengatur agar seluruh gambar terlihat dalam satu baris */
+    transition: transform 1s ease-in-out; /* Efek animasi sliding */
+}
+
+.slide-photo {
+    width: 100%;  /* Setiap gambar mengisi kotak secara penuh */
+    height: 100%;
+    flex-shrink: 0;  /* Agar gambar tidak mengecil */
+}
+
+.slide-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menyesuaikan gambar dengan kotak */
+    border-radius: 10px;
+}
+
+
+
+
+
+/* About Section */
+.about-section {
+    color: #fcfcfc;
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+
+.description-box:hover {
+    transform: scale(1.05); /* Membesarkan sedikit kotak saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Menambah bayangan */
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Description Box Styles */
+.description-box {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background: radial-gradient(at right, #1f3b51, #8f9aa9);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 8px rgba(61, 61, 108, 0.6); /* Dark blue shadow */
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 950px;
+}
+
+.description-content {
+    flex: 1;
+    padding-right: 70px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.description-image {
+    
+    padding-right: 60px;
+    flex-shrink: 0;
+}
+
+.description-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #2f3953; /* Dark blue border */
+}
+
+
+.team {
+    display: flex;
+    padding-left: 10px;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    
+}
+
+.person {
+    background: radial-gradient(at top, #1f3b51, #9db2cd);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    box-shadow: 0 8px 8px rgba(61, 61, 108, 0.6);
+}
+
+/* Global settings for background images */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/star.jpg);
+    min-height: 100vh;
+    background-size: cover; /* Optional: fallback jika gambar gagal dimuat */
+}
+
+/* Navbar background */
+
+
+/* Home Section Background */
+.home-section { /* Ubah path ke wallpaper home */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px; /* Padding untuk sedikit ruang di samping */
+}
+
+.contact-section {
+    margin-top: auto; /* Mendorong elemen ke bagian paling bawah */
+    text-align: center;
+    padding: 20px; /* Ruang dalam untuk estetika */
+    background-color: rgba(16, 23, 48, 0.5); /* Warna latar belakang opsional */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    color: white;/* Bayangan untuk kesan elevated */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center; /* Menempatkan elemen di tengah horizontal */
+    gap: 20px; /* Jarak antar elemen */
+    color: white;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+
+/* Tambahan styling untuk teks kontras */
+h1, h2, p {
+    margin: 0;
+    padding: 10px;
+}
+
+button {
+    text-decoration: none;
+}
+
+.center-button {
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #1a2143; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Optional: For better positioning, you can add flexbox to the parent container */
+.center-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+
+button:hover {
+    background-color: #5d738f;
+}
+
+
+/* Gaya umum untuk gambar profil */
+.person img {
+    width: 120px; /* Lebar gambar */
+    height: 120px; /* Tinggi gambar */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    display: block; /* Membuat gambar rapi di dalam kotaknya */
+    margin: 0 auto 15px; /* Tengah dan beri jarak ke bawah */
+    border: 3px solid #1f3b51; /* Garis tepi berwarna navy */
+}
+
+
+.person:hover {
+    transform: translateY(-10px);
+}
+
+.person img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.person h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.person p {
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Styling untuk label dan isi */
+.label {
+    font-weight: bold; /* Buat teks label menjadi bold */
+    color: black;      /* Warna hitam untuk label */
+}
+
+.info {
+    color: #2e2e34;    /* Warna abu-abu untuk teks isi */
+}
+
+/* Tambahkan sedikit jarak antar paragraf */
+.person p {
+    margin: 5px 0; 
+}
+
+/* Technologies Section */
+/* Section Styles */
+/* Section Styles */
+.technologies-section {
+    text-align: center;
+    margin: 40px auto; /* Memusatkan kotak secara horizontal */
+    padding: 20px;
+    background: radial-gradient(at top, #ccd1d5, #8b9097);
+    
+    max-width: 1350px; /* Membatasi lebar maksimal kotak */
+
+}
+
+/* Judul Section */
+.technologies-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #343434;
+}
+
+/* Technology Table Styles */
+.technology-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Technology Item */
+.technology-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px; /* Ukuran item sedikit lebih kecil */
+    padding: 10px;
+    border: 2px solid transparent; /* Default border */
+    border-radius: 10px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.technology-item:hover {
+    transform: scale(1.1); /* Membesarkan item saat hover */
+    border-color: #f0c040; /* Menambahkan border warna emas saat hover */
+}
+
+/* Technology Image Styles */
+.technology-image {
+    width: 80px; /* Ukuran gambar lebih kecil */
+    height: 80px; /* Ukuran gambar lebih kecil */
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 5px;
+}
+
+.technology-image:hover {
+    transform: rotate(3deg) scale(1.15); /* Membesarkan dan memiringkan gambar sedikit */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Menambahkan bayangan pada gambar */
+}
+
+/* Technology Text Styles */
+.technology-item p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin: 0;
+    transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.technology-item:hover p {
+    color: #f0c040; /* Mengubah warna teks menjadi emas saat hover */
+}
+
+
+
+
+
+/* Styling untuk garis pemisah */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+    width: 100%;
+}
+
+
+/* Warna Default */
+/* Mengatur gaya dasar */
+#dynamic-text {
+    font-size: 30px; /* Ukuran font */
+    font-family: Arial, sans-serif; /* Jenis font */
+    color: #9db2cd; /* Warna teks default */
+    font-weight: bold; /* Menebalkan teks */
+    white-space: nowrap; /* Menghindari teks terpotong */
+    overflow: hidden; /* Menyembunyikan teks yang belum muncul */
+    padding-right: 5px; /* Memberikan ruang antara teks dan garis vertikal */
+}
+
+/* Efek animasi ketikan */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Efek untuk menghapus teks */
+@keyframes deleting {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.icon-one {
+    font-size: 25px; /* Ukuran ikon */
+    animation: rotateAnimation 2s infinite ease-in-out;
+}
+
+.icon-two {
+    font-size: 25px;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(-5deg); /* Posisi awal */
+    }
+    50% {
+        transform: rotate(40deg); /* Putar 180 derajat */
+    }
+    100% {
+        transform: rotate(-5deg); /* Kembali ke posisi awal */
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(10px); /* Posisi awal */
+    }
+    50% {
+        transform: translateX(90px); /* Pindahkan 20px ke kanan */
+    }
+    100% {
+        transform: translateX(10px); /* Kembali ke posisi semula */
+    }
+}
+
+
+
+
+
